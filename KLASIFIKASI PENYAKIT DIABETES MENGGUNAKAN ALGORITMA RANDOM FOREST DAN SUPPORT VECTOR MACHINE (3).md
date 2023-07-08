@@ -54,7 +54,7 @@ Langkah selanjutnya yaitu melihat apakah terdapat outliers pada data. Dari semua
 
 ## CEK _OUTLIERS_
 
-![image](https://github.com/powtoonang/coba/assets/137903953/09435adc-1aed-44a3-bbf0-8ea50d638bb9)
+![image](https://github.com/powtoonang/coba1/blob/main/outliers.png)
 
 
 
@@ -64,7 +64,7 @@ Outliers pada variabel Age ini tidak dibuang. Hal itu dikarenakan outliers terse
 
 Langkah selanjutnya yaitu dilakukan pengecekan keseimbangan data.
 
-![image](https://github.com/powtoonang/coba/assets/137903953/333dd49c-39b3-4370-b880-7dac341f5931)
+![image](https://github.com/powtoonang/coba1/blob/main/2.%20keseimbangan%20data.png)
 
 
 Gambar 2. Keseimbangan Data
@@ -74,7 +74,7 @@ Gambar tersebut memperlihatkan bahwa data tidak seimbang. Oleh karena itu, perlu
 ## MODELLING
 Karena data _imbalance_, maka dilakukan penyeimbangan data. Metode yang digunakan yaitu Synthetic Minority Oversampling Technique (SMOTE). Hasil data yang telah diseimbangkan dapat dilihat dibawah ini.
 
-![image](https://github.com/powtoonang/coba/assets/137903953/a76d1f3c-8226-4b4c-b404-fc78791b36a8)
+![image](https://github.com/powtoonang/coba1/blob/main/3.%20setelah%20smote.png)
 
 
 Gambar 3. Keseimbangn Data Setelah SMOTE
@@ -85,7 +85,7 @@ terlihat bahwa data sudah seimbang. Data dengan label -1 setelah diseimbangkan m
 Algoritma _Random Forest_ merupakan salah satu _ensemble learning_. _Ensemble learning_ adalah metode dimana model akan dilatih untuk memecahkan masalah yang sama dan digabungkan untuk mendapatkan suatu hasil yang lebih baik. Algoritma _Random Forest_ ini ialah algoritma yang dikembangkan dari algoritma _Decision Tree_. _Decision tree_ adalah algoritma yang berbentuk sebuah pohon untuk mengambil kesimpulan. _Decision Tree_ ini dapat digunakan untuk mengklasifikasikan sebuah data dengan variabel input dan output dalam bentuk pohon. Terdapat beberapa istilah yang digunakan dalam _Decision Tree_, yaitu _root node_, _internal node_, dan _leaf_. Root merupakan _node_ yang terletak pada bagian paling atas di pohon. Internal node merupakan node percabangan yang masih memiliki cabang di bawahnya, sedangkan leaf merupakan node akhir yang tidak memiliki percabangan lagi. _Decision Tree_ akan memasukkan sebuah input melalui _root_, dan memiliki kesimpulan melalui leaf node untuk menentukan data input termasuk dalam kelas yang mana. Algoritma ini dikembangkan menjadi sebuah algoritma baru yang dinamakan sebagai Random Forest. Sesuai dengan namanya, algoritma ini akan menciptakan sebuah hutan dengan sejumlah pohon. Cara kerja klasifikasi menggunakan algoritma ini yaitu Random Forest akan melakukan bootstrap pada data training untuk membentuk setiap pohon. Selanjutnya, pohon tersebut akan digabungkan dengan pohon yang lain, dimana satu pohon akan menghasilkan satu keputusan. Oleh sebab itu, algorima _Random Forest_ ini dapat dikatakan sebagai kumpulan _Decision Tree_. Untuk mendapatkan hasil akhir, maka dilakukan _majority voting_ dimana _vote_ terbanyak akan menjadi pemenangnya. Menurut Pamuji dan Ramadhan (2021), algoritma _Random Forest_ ini memiliki kelebihan yaitu dapat menghasilkan eror yang relatif rendah, performa yang baik dalam klasifikasi, dan cocok untuk data yang berjumlah besar. Parameter yang dapat digunakan dalam algoritma ini yaitu _n estimator_ (jumlah pohon), _max feature_ (jumlah variabel yang perlu dipertimbangkan saat mencari pemisah terbaik), _max depth_ (kedalaman pohon), dan lain lain.
 
 Hasil kinerja dari Random Forest dapat dilihat melalui gambar ini.
-![image](https://github.com/powtoonang/coba/assets/137903953/8959f0e7-84b1-479c-9950-a81077d42f4d)
+![image](https://github.com/powtoonang/coba1/blob/main/4.%20cf%20rf.png)
 
 
 Gambar 4. _Confusion Matrix Random Forest_
@@ -94,7 +94,7 @@ Gambar 4. _Confusion Matrix Random Forest_
 _Feature Importance Random Forest_
 _feature importance Random Forest_ dapat dilihat melalui gambar dibawah ini
 
-![image](https://github.com/powtoonang/coba/assets/137903953/8c17e4d0-55b9-43db-bb31-ea8665629153)
+![image](https://github.com/powtoonang/coba1/blob/main/5.%20f%20importance.png)
 
 
 Gambar 5. _Feature Importance Random Forest_
@@ -106,7 +106,7 @@ Support vector machine (SVM) merupakan salah satu algoritma yang dapat digunakan
 
 Pada SVM dilakukan normalisasi data. Hal ini dilakukan karena svm bekerja menggunakan jarak, dimana data akan dipisahkan menggunakan _hyperplane_. Terdapat variabel usia yang memiliki nilai besar dibandingkan dengan variabel yang lainnya. Oleh karena itu dilakukan normalisasi data. 
 Hasil klasifikasi menggunakan SVM dapat dilihat melalui confusion matrix dibawah ini.
-![image](https://github.com/powtoonang/coba/assets/137903953/3d17fbaa-f29b-4e3b-b044-5532db4e0faf)
+![image](https://github.com/powtoonang/coba1/blob/main/6.%20cf%20svm.png)
 
 Gambar 6. _Confusion Matrix SVM_
 
@@ -115,13 +115,13 @@ Gambar 6. _Confusion Matrix SVM_
 Berdasarkan hasil klasifikasi, akan dilakukan perbandingan dari kedua model tersebut. Melalui _confusion matrix_, dapat dihitung _evaluation matrix_ untuk menilai kinerja dari sebuah algoritma klasifikasi, yaitu akurasi, presisi, _recall, dan f1 score_.
 _Evaluation matrix_ dari _Random forest_ dapat dilihat melalui gambar dibawah ini. 
 
-![cfrf](https://github.com/powtoonang/coba/assets/137903953/0c904771-0811-4040-bf0a-87b7fe3fa599)
+![cfrf](https://github.com/powtoonang/coba1/blob/main/4.%20cf%20rf.png)
 
 Gambar 7. _Evaluation Matrix Random Forest_
 
 Dari gambar tersebut dapat diketahui bahwa akurasi, presisi, _recall_, dan _f1 score_ dari _random forest_ sebesar 0,99. Sedangkan untuk SVM _evaluation matrix_ dapat dilihat melalui gambar dibawah ini.
 
-![cfsvm](https://github.com/powtoonang/coba/assets/137903953/a5147fcd-0a0e-42e1-9832-4117171ed794)
+![cfsvm](https://github.com/powtoonang/coba1/blob/main/6.%20cf%20svm.png)
 
 Gambar 8. Evaluasi Matrix SVM
 
